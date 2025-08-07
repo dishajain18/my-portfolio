@@ -1,0 +1,341 @@
+/* About Section */
+.about-gradient {
+    background: linear-gradient(135deg, #704628 0%, #6e4a31 100%);
+    color: white;
+    text-align: center;
+}
+
+.about-details {
+    margin-bottom: 2rem;
+}
+
+.about-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Experience Section - Fixed timeline alignment */
+.vertical-timeline {
+    max-width: 900px; /* Increased width for better centering */
+    margin: 0 auto;
+    position: relative;
+}
+
+.vertical-timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px; /* Adjusted position */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 70px; /* Adjusted padding */
+}
+
+.timeline-card {
+    border: none;
+    border-radius: 15px;
+    position: relative;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -58px; /* Perfectly aligned with line */
+    top: 24px; /* Better vertical position */
+    width: 14px;
+    height: 14px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--bg-light);
+    z-index: 2;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: flex-start; /* Changed to flex-start for better alignment */
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.timeline-duration {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--accent-color);
+    color: white;
+}
+
+.timeline-title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.timeline-company {
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.timeline-location {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.timeline-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-highlights {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.timeline-achievements {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-achievement {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.achievement-check-work,
+.achievement-check-education {
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    font-size: 0.7rem;
+}
+
+.achievement-check-work {
+    color: var(--secondary-color);
+}
+
+.achievement-check-education {
+    color: var(--accent-color);
+}
+
+/*Skills*/
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: 100%; 
+}
+
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-icon-img {
+    height: 2rem;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.skill-percentage {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.skill-bar-container {
+    background: #e8dcc6;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .vertical-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-card-work::before,
+    .timeline-card-education::before {
+        left: -48px;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+}
+
+/* Projects Section */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.project-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-technologies {
+    margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+}
+
+.project-link-github {
+    background: var(--primary-color);
+}
+
+.project-link-github:hover {
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+}
+
+.project-link-demo {
+    background: var(--secondary-color);
+}
+
+.project-link-demo:hover {
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Section Call to Actions */
+.section-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-text {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline-item {
+        min-width: 280px;
+    }
+    
+    .about-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+}
