@@ -33,8 +33,8 @@ function createProjectsSection() {
             description: "A modern portfolio website showcasing projects and skills. The design reflects my approach to web aesthetics, clean and simple.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
             image: "images/project4.jpg",
-            github: "https://github.com/yourusername/portfolio",
-            demo: "https://your-portfolio-demo.com",
+            github: "https://github.com/dishajain18/my-portfolio",
+            demo: "https://dishajain-portfolio.vercel.app/",
             status: "Completed"
         }
     ];
